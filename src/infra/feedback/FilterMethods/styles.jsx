@@ -15,6 +15,7 @@ export const Filter = styled.TouchableOpacity`
 `;
 
 export const FilterTitle = styled.Text`
-	color: ${({ theme }) => theme.colors.grayText};
+	color: ${({ theme, active }) =>
+		!active ? theme.colors.grayText : theme.colors.highlight};
 	font-size: 20px;
 `;

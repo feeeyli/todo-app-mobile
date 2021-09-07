@@ -1,17 +1,21 @@
 import React from "react";
 import { Container, Filter, FilterTitle } from "./styles";
 
-const FilterMethods = () => {
+const FilterMethods = ({ TodoMethods: { filterTodoList }, filterMode }) => {
 	return (
 		<Container>
-			<Filter>
-				<FilterTitle>All</FilterTitle>
+			<Filter onPress={() => filterTodoList("all")}>
+				<FilterTitle active={filterMode === "all"}>All</FilterTitle>
 			</Filter>
-			<Filter>
-				<FilterTitle>Active</FilterTitle>
+			<Filter onPress={() => filterTodoList("active")}>
+				<FilterTitle active={filterMode === "active"}>
+					Active
+				</FilterTitle>
 			</Filter>
-			<Filter>
-				<FilterTitle>Completed</FilterTitle>
+			<Filter onPress={() => filterTodoList("completed")}>
+				<FilterTitle active={filterMode === "completed"}>
+					Completed
+				</FilterTitle>
 			</Filter>
 		</Container>
 	);

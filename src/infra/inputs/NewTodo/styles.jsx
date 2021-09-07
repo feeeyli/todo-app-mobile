@@ -30,7 +30,7 @@ export const Input = styled.TextInput.attrs(({ theme }) => ({
 `;
 
 export const Icon = styled(Ionicons).attrs(({ theme }) => ({
-	name: "checkmark",
+	name: "add",
 	size: 28,
 	color: theme.colors.headerItems,
 }))``;

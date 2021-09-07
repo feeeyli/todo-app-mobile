@@ -9,17 +9,34 @@ import {
 	ClearTitle,
 } from "./styles";
 
-const TodoList = ({ todoList, itemsLeft }) => {
+const TodoList = ({
+	todoList,
+	itemsLeft,
+	TodoMethods: { clearTodoList },
+	TodoMethods,
+	filterMode,
+}) => {
+	const filterBy = {
+		completed: () => todoList.filter((todo) => todo.completed === true),
+		active: () => todoList.filter((todo) => todo.completed === false),
+	};
+
+	const filteredTodoList = !filterBy[filterMode]
+		? todoList
+		: filterBy[filterMode]();
+
 	return (
 		<Container>
 			<List
-				data={todoList}
+				data={filteredTodoList}
 				keyExtractor={(item) => item.id}
-				renderItem={({ item }) => <TodoItem item={item} />}
+				renderItem={({ item }) => (
+					<TodoItem item={item} TodoMethods={TodoMethods} />
+				)}
 			/>
 			<Footer>
 				<LeftCounter>{itemsLeft} items left</LeftCounter>
-				<Clear>
+				<Clear onPress={clearTodoList}>
 					<ClearTitle>Clear Completed</ClearTitle>
 				</Clear>
 			</Footer>
