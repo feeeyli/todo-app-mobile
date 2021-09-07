@@ -12,7 +12,7 @@ const TodoItem = ({ item: { title, completed } }) => {
 	return (
 		<Container>
 			<Complete completed={completed}>
-				<CompleteIcon />
+				<CompleteIcon completed={completed} />
 			</Complete>
 			<Title completed={completed}>{title}</Title>
 			<Delete>

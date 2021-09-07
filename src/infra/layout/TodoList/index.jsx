@@ -9,10 +9,14 @@ import {
 	ClearTitle,
 } from "./styles";
 
-const TodoList = ({ itemsLeft }) => {
+const TodoList = ({ todoList, itemsLeft }) => {
 	return (
 		<Container>
-			<List />
+			<List
+				data={todoList}
+				keyExtractor={(item) => item.id}
+				renderItem={({ item }) => <TodoItem item={item} />}
+			/>
 			<Footer>
 				<LeftCounter>{itemsLeft} items left</LeftCounter>
 				<Clear>
