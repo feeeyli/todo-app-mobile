@@ -13,6 +13,7 @@ import { ThemeProvider } from "styled-components";
 // Components
 import Header from "./src/infra/layout/Header";
 import NewTodo from "./src/infra/inputs/NewTodo";
+import TodoList from "./src/infra/layout/TodoList";
 
 const App = () => {
 	const [theme, setTheme] = useState("light");
@@ -26,6 +27,7 @@ const App = () => {
 
 				<Header themeControl={{ theme, setTheme }} />
 				<NewTodo />
+				<TodoList itemsLeft={5} />
 
 				<StatusBar
 					backgroundColor="transparent"
