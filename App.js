@@ -17,6 +17,7 @@ import TodoList from "./src/infra/layout/TodoList";
 import FilterMethods from "./src/infra/feedback/FilterMethods";
 
 const App = () => {
+	const [todoList, setTodoList] = useState([]);
 	const [theme, setTheme] = useState("light");
 
 	return (
@@ -28,8 +29,16 @@ const App = () => {
 
 				<Header themeControl={{ theme, setTheme }} />
 				<NewTodo />
-				<TodoList itemsLeft={1} />
-				<FilterMethods />
+				{todoList.length > 0 && (
+					<>
+						<TodoList
+							itemsLeft={
+								todoList.filter((item) => item.completed).length
+							}
+						/>
+						<FilterMethods />
+					</>
+				)}
 
 				<StatusBar
 					backgroundColor="transparent"
