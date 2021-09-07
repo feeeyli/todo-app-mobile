@@ -5,6 +5,7 @@ import { Background, Container } from "./src/styles/AppStyles";
 import lightTheme from "./src/styles/themes/light";
 import darkTheme from "./src/styles/themes/dark";
 import { ThemeProvider } from "styled-components";
+import Header from "./src/infra/layout/Header";
 
 const App = () => {
 	const [theme] = useState("light");
@@ -15,6 +16,7 @@ const App = () => {
 				<Background
 					source={require("./src/assets/bg-mobile-light.jpg")}
 				/>
+				<Header />
 				<StatusBar
 					backgroundColor="transparent"
 					translucent
