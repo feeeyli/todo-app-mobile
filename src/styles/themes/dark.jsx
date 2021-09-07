@@ -7,5 +7,7 @@ export default {
 		text: "#cacde8",
 		grayText: "#393a4c",
 		checkBorder: "#4d5066",
+		headerItems: "#ffffff",
 	},
+	icon: "sunny",
 };

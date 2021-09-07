@@ -8,7 +8,7 @@ import { ThemeProvider } from "styled-components";
 import Header from "./src/infra/layout/Header";
 
 const App = () => {
-	const [theme] = useState("light");
+	const [theme, setTheme] = useState("light");
 
 	return (
 		<ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -16,7 +16,7 @@ const App = () => {
 				<Background
 					source={require("./src/assets/bg-mobile-light.jpg")}
 				/>
-				<Header />
+				<Header themeControl={{ theme, setTheme }} />
 				<StatusBar
 					backgroundColor="transparent"
 					translucent

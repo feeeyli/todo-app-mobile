@@ -7,5 +7,7 @@ export default {
 		text: "#484b6a",
 		grayText: "#9394a5",
 		checkBorder: "#d2d3db",
+		headerItems: "#ffffff",
 	},
+	icon: "moon",
 };
