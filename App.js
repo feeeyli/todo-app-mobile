@@ -27,7 +27,7 @@ const App = () => {
 
 				<Header themeControl={{ theme, setTheme }} />
 				<NewTodo />
-				<TodoList itemsLeft={5} />
+				<TodoList itemsLeft={1} />
 
 				<StatusBar
 					backgroundColor="transparent"
