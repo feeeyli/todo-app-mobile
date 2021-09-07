@@ -26,7 +26,7 @@ Este projeto consiste em um app para listar seus afazeres, suas tarefas.
 
 ## Localmente (Via APK)
 
--   Caso tenha um celular android e queira utilizar o app basta [clicar aqui]() e fazer o download do APK
+-   Caso tenha um aparelho android e queira utilizar o app basta [clicar aqui](https://expo.io/artifacts/c1460786-a65d-4671-92a6-409535f02337) e fazer o download do APK
 
 ### Via Web:
 
